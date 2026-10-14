@@ -14,6 +14,7 @@ public class Test {
 		//IPayment payment=new DebitCardPayment();
 		//PaymentService service=new PaymentService(payment);
 		//service.doPayment(50000.213);
+		 
 		
 		//Setter injection
 		
