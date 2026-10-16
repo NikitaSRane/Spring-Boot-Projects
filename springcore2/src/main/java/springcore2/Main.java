@@ -7,9 +7,9 @@ public class Main {
 //		create manual object and dependency injection
 		
 		
-//		MyInterface my=new Task2();
-//		Test obj=new Test(my);
-//		obj.start();
+		MyInterface my=new Task2();
+		Test obj=new Test(my);
+		obj.start();
 		
 		
 	}
