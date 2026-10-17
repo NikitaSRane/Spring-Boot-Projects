@@ -12,11 +12,21 @@
 	
 	</bean>
 	
+	<!--  creates two different bean of same classes create different instance in memory -->
+	
+	<bean id="bt1" class="com.spring.Task1">
+	</bean>
+	
+	<bean id="bt2" class="com.spring.Task1">
+	</bean>
+	
+	<!-- 
 	<bean id="t1" class="com.spring.Task1" scope="singleton">
 	</bean>
 	
+	
 	<bean id="t2" class="com.spring.Task2" scope="prototype">
 	</bean>
-	
+	 -->
 	
 </beans>
