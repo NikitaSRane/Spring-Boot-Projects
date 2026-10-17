@@ -17,9 +17,10 @@ public class Main {
 		
 		ApplicationContext app=new ClassPathXmlApplicationContext("myxml.xml");
 		
-		/*
-		MyClass obj=(MyClass) app.getBean("test");
-		obj.start();*/
+		MyClass obj=(MyClass) app.getBean("test"); // typecasting
+		System.out.println("Hashcode of MyClass :"+obj.hashCode());
+
+		obj.start();
 		
 	}
 
