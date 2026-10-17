@@ -17,10 +17,56 @@ public class Main {
 		
 		ApplicationContext app=new ClassPathXmlApplicationContext("myxml.xml");
 		
-		MyClass obj=(MyClass) app.getBean("test"); // typecasting
-		System.out.println("Hashcode of MyClass :"+obj.hashCode());
+		
+//		invoke constructor injection
+		
+//		MyClass obj=(MyClass) app.getBean("test"); // typecasting
+//		System.out.println("Hashcode of MyClass :"+obj.hashCode());
+//
+//		obj.start();
+		
+		
+		
+//		singleton scope = only creates one object
+		
+		Task1 t1= (Task1) app.getBean("t1");
+		System.out.println("Hashcode of t1 :"+ t1.hashCode());
+		Task1 t2= (Task1) app.getBean("t1");
+		System.out.println("Hashcode of t1 :"+ t2.hashCode());
+		
+		if(t1 == t2)
+		{
+			System.out.println("Both reference points to same object as Singleton");
+		}
+		else
+		{
+			System.out.println("object as prototype");
 
-		obj.start();
+		}
+
+		
+//		prototype scope = multiple objects
+				
+		Task2 pt1= (Task2) app.getBean("t2");
+		System.out.println("Hashcode of pt1 :"+ pt1.hashCode());
+		Task2 pt2= (Task2) app.getBean("t2");
+		System.out.println("Hashcode of pt2 :"+ pt2.hashCode());
+		
+		if(pt1 == pt2)
+		{
+			System.out.println("Both reference points to same object as Singleton");
+		}
+		else
+		{
+			System.out.println("Both references points to different object as prototype");
+
+		}
+
+
+
+		
+		
+		
 		
 	}
 

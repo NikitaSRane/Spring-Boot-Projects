@@ -8,14 +8,14 @@
 
 	<bean id="test" class="com.spring.MyClass">
 
-	<constructor-arg ref="t1"/>  <!-- IOC invoke parameterized constructor -->
+	<!--  <constructor-arg ref="t1"/>  IOC invoke parameterized constructor -->
 	
 	</bean>
 	
-	<bean id="t1" class="com.spring.Task1">
+	<bean id="t1" class="com.spring.Task1" scope="singleton">
 	</bean>
 	
-	<bean id="t2" class="com.spring.Task2">
+	<bean id="t2" class="com.spring.Task2" scope="prototype">
 	</bean>
 	
 	
