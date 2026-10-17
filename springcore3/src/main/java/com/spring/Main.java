@@ -26,6 +26,9 @@ public class Main {
 //		obj.start();
 		
 		
+//		invoke setter injection  after invoke default constructor. no need to call for setter method separately.
+//		ApplicationContext app=new ClassPathXmlApplicationContext("myxml.xml");
+		
 		
 //		singleton scope = only creates one object
 		
@@ -66,11 +69,11 @@ public class Main {
 		
 //		 creates two different beans of same class create different instance in memory 
 		
-		Task1 bt1=(Task1) app.getBean("bt1");
-		System.out.println("Hashcode of bt1 :"+ bt1.hashCode());
-
-		Task1 bt2=(Task1) app.getBean("bt2");
-		System.out.println("Hashcode of bt2 :"+ bt2.hashCode());
+//		Task1 bt1=(Task1) app.getBean("bt1");
+//		System.out.println("Hashcode of bt1 :"+ bt1.hashCode());
+//
+//		Task1 bt2=(Task1) app.getBean("bt2");
+//		System.out.println("Hashcode of bt2 :"+ bt2.hashCode());
 
 		
 

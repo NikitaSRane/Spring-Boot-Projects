@@ -7,20 +7,25 @@
 	<!-- bean definitions here -->
 
 	<bean id="test" class="com.spring.MyClass">
-
+	<property name="start" ref="t1"/>
 	<!--  <constructor-arg ref="t1"/>  IOC invoke parameterized constructor -->
 	
 	</bean>
 	
-	<!--  creates two different bean of same classes create different instance in memory -->
+	
+	<bean id="t1" class="com.spring.Task1" />
+	<bean id="t2" class="com.spring.Task2" />
+	
+	
+	<!--  creates two different bean of same classes create different instance in memory
 	
 	<bean id="bt1" class="com.spring.Task1">
 	</bean>
 	
 	<bean id="bt2" class="com.spring.Task1">
 	</bean>
-	
-	<!-- 
+	 -->
+	<!--  bean scopes
 	<bean id="t1" class="com.spring.Task1" scope="singleton">
 	</bean>
 	
