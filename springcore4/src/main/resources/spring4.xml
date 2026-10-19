@@ -10,12 +10,19 @@
 	<bean id="payment" class="spring.Payment" autowire="byName" />
 	<bean id="cc" class="spring.CreditCard" />
 	<bean id="dopayment" class="spring.Upi"  />
-	
 	-->
 	
 	<!-- introduce autowire byType  -->
+	<!--
 	<bean id="payment" class="spring.Payment" autowire="byType" />
-	<bean id="cc" class="spring.CreditCard" primary="true" /> <!-- shows ambiuity error so we give preference using primary attribute -->
+	<bean id="cc" class="spring.CreditCard" primary="true" />  shows ambiuity error so we give preference using primary attribute 
+	<bean id="upi" class="spring.Upi"  />
+	-->
+	
+	<!-- introduce autowire constructor  -->
+	
+	<bean id="payment" class="spring.Payment" autowire="constructor" />
+	<bean id="cc" class="spring.CreditCard" primary="true"/> 
 	<bean id="upi" class="spring.Upi"  />
 	
 </beans>
