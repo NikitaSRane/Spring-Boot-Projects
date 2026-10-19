@@ -4,11 +4,18 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- introduce autowire attribute -->
+    <!-- introduce autowire byName  -->
     
-	
+	<!--  
 	<bean id="payment" class="spring.Payment" autowire="byName" />
 	<bean id="cc" class="spring.CreditCard" />
 	<bean id="dopayment" class="spring.Upi"  />
+	
+	-->
+	
+	<!-- introduce autowire byType  -->
+	<bean id="payment" class="spring.Payment" autowire="byType" />
+	<bean id="cc" class="spring.CreditCard" primary="true" /> <!-- shows ambiuity error so we give preference using primary attribute -->
+	<bean id="upi" class="spring.Upi"  />
 	
 </beans>
