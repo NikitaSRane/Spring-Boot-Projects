@@ -4,9 +4,11 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- bean definitions here -->
+    <!-- introduce autowire attribute -->
+    
 	
-	<bean id="payment" class="spring.Payment" />
-	<bean id="upi" class="spring.Upi" />
+	<bean id="payment" class="spring.Payment" autowire="byName" />
 	<bean id="cc" class="spring.CreditCard" />
+	<bean id="dopayment" class="spring.Upi"  />
+	
 </beans>
