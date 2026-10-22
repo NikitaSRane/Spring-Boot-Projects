@@ -10,16 +10,21 @@ import com.annotation.MyInterface;
 public class Comp1 {
 	
 	
-	
 	public Comp1()
 	{
 		System.out.println("Inside comp1 default constructor.");
 	}
 	
-	@Autowired
-	@Qualifier("con")
-	MyInterface my;
 	
+//	@Qualifier("con")
+	MyInterface my;
+
+	@Autowired
+	public Comp1(MyInterface my)
+	{
+		this.my=my;
+		System.out.println("Inside comp1 pararm constructor.");
+	}
 
 	public void generateReport()
 	{
