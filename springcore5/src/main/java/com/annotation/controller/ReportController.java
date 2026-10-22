@@ -1,8 +1,10 @@
 package com.annotation.controller;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Controller;
 
 import com.annotation.MyInterface;
+
 
 @Controller("con")
 public class ReportController implements MyInterface{
