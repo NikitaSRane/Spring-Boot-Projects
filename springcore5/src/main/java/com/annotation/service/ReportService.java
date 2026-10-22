@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.annotation.MyInterface;
 
-@Service("my")
+@Service("service")
 public class ReportService implements MyInterface {
 	
 	

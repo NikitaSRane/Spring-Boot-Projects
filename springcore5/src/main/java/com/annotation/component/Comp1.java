@@ -1,6 +1,7 @@
 package com.annotation.component;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import com.annotation.MyInterface;
@@ -16,6 +17,7 @@ public class Comp1 {
 	}
 	
 	@Autowired
+	@Qualifier("con")
 	MyInterface my;
 	
 
