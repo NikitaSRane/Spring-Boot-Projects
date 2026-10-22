@@ -15,17 +15,28 @@ public class Comp1 {
 		System.out.println("Inside comp1 default constructor.");
 	}
 	
-	
+//	field injection // @Primary and @Qualifier allowed
 //	@Qualifier("con")
 	MyInterface my;
 
-	@Autowired
-	public Comp1(MyInterface my)
+	
+//	constructor injection 
+//	@Autowired // @Primary allowed only
+//	public Comp1(MyInterface my)
+//	{
+//		this.my=my;
+//		System.out.println("Inside comp1 pararm constructor.");
+//	}
+
+//	setter injection
+	
+	@Autowired // @Primary and @Qualifier allowed in setter
+	public void setReport(MyInterface my)
 	{
 		this.my=my;
-		System.out.println("Inside comp1 pararm constructor.");
 	}
-
+	
+	
 	public void generateReport()
 	{
 		my.getReport();
