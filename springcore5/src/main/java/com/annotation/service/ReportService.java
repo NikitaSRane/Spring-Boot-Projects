@@ -1,15 +1,26 @@
 package com.annotation.service;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service
-public class ReportService {
+import com.annotation.MyInterface;
+
+@Service("my")
+public class ReportService implements MyInterface {
+	
 	
 	public ReportService()
 	{
 		System.out.println("Inside default report service constructor");
 	}
 	
+	
+	
+	@Override
+	public void getReport() {
 
+		System.out.println("Getting report by ReportService");
+		
+	}
 }

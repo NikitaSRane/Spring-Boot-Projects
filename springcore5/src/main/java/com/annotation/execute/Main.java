@@ -5,6 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.annotation.AppConfig;
 import com.annotation.Dao.ReportDao;
+import com.annotation.component.Comp1;
 
 public class Main {
 
@@ -12,8 +13,8 @@ public class Main {
 		
 		ApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
 		
-		ReportDao dao=context.getBean(ReportDao.class);
-		System.out.println(dao.hashCode());
+		Comp1 com= context.getBean(Comp1.class);
+		com.generateReport();
 	}
 
 }
