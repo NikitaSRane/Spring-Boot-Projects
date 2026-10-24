@@ -5,10 +5,14 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!-- bean definitions here -->
-
-	<bean id="cycle" class="com.lifecycle.LifeCycle" init-method="init" destroy-method="destroy">  <!-- for init and destroy method -->
+	<!-- for init and destroy method xml based approach -->
+	<!-- 
+	<bean id="cycle" class="com.lifecycle.LifeCycle" init-method="init" destroy-method="destroy">   
 	</bean>
-	
+	 -->
+	 
+	 <!-- programmatic approach -->
+	<bean id="program" class="com.lifecycle.Programatic"/>
 
 	
 </beans>

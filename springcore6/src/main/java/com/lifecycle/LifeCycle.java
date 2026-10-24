@@ -1,5 +1,7 @@
 package com.lifecycle;
 
+// this call is for xml- based bean lifecycle
+
 public class LifeCycle {
 	
 	public void init()
