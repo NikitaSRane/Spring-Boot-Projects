@@ -2,6 +2,7 @@ package com.lifecycle;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main{
@@ -20,13 +21,24 @@ public class Main{
 //		ccontext.close(); // calling destroying method
 		
 		
-		// Programmatical approach using interfaces
+//		Programmatical approach using interfaces
+//		
+//		ApplicationContext context= new ClassPathXmlApplicationContext("bean.xml"); // ioc started
+//		
+//		Programatic program= context.getBean(Programatic.class); // access bean
+//		
+//		program.getData(); // call business logic method
+//		
+//		ConfigurableApplicationContext ccontext=(ConfigurableApplicationContext) context;  // need for destroy bean
+//		ccontext.close(); // calling destroying method
 		
-		ApplicationContext context= new ClassPathXmlApplicationContext("bean.xml"); // ioc started
 		
-		Programatic program= context.getBean(Programatic.class); // access bean
+//		Annotation based bean lifecycle
 		
-		program.getData(); // call business logic method
+		ApplicationContext context= new AnnotationConfigApplicationContext(AppConfig.class); // ioc started
+		
+		LifeCycle cycle= context.getBean(LifeCycle.class);
+		cycle.getData();
 		
 		ConfigurableApplicationContext ccontext=(ConfigurableApplicationContext) context;  // need for destroy bean
 		ccontext.close(); // calling destroying method
